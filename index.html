@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- <link rel="stylesheet" href="/app.css" /> -->
   <body>
     <div id="root"></div>
   </body>
@@ -19,7 +20,7 @@
         setInverted((current) => !current);
       };
       return (
-        <div>
+        <div class="first-div">
           <div>
             <label htmlfor="minutes">Minutes</label>
             <input value={inverted ? amount * 60 : amount} id="minutes" placeholder="Minutes" type="number" onChange={onChange} disabled={inverted} />
@@ -28,8 +29,12 @@
             <label htmlfor="hours">Hours</label>
             <input value={inverted ? amount : Math.round(amount / 60)} id="hours" placeholder="Hours" type="number" onChange={onChange} disabled={!inverted} />
           </div>
-          <button onClick={reset}>Reset</button>
-          <button onClick={onInvert}>{inverted ? "Turn back" : "Invert"}</button>
+          <button class="rst" onClick={reset}>
+            Reset
+          </button>
+          <button class="invert" onClick={onInvert}>
+            {inverted ? "Turn back" : "Invert"}
+          </button>
         </div>
       );
     }
@@ -45,7 +50,7 @@
         setInverted((current) => !current);
       };
       return (
-        <div>
+        <div class="first-div">
           <div>
             <label htmlfor="km">Kilometers</label>
             <input
@@ -68,8 +73,12 @@
               disabled={!inverted}
             />
           </div>
-          <button onClick={reset}>Reset</button>
-          <button onClick={onInvert}>{inverted ? "Turn back" : "Invert"}</button>
+          <button class="rst" onClick={reset}>
+            Reset
+          </button>
+          <button class="invert" onClick={onInvert}>
+            {inverted ? "Turn back" : "Invert"}
+          </button>
         </div>
       );
     }
@@ -85,7 +94,7 @@
         setInverted((current) => !current);
       };
       return (
-        <div>
+        <div class="first-div">
           <div>
             <label htmlfor="cm">Centimeters</label>
             <input
@@ -108,8 +117,12 @@
               disabled={!inverted}
             />
           </div>
-          <button onClick={reset}>Reset</button>
-          <button onClick={onInvert}>{inverted ? "Turn back" : "Invert"}</button>
+          <button class="rst" onClick={reset}>
+            Reset
+          </button>
+          <button class="invert" onClick={onInvert}>
+            {inverted ? "Turn back" : "Invert"}
+          </button>
         </div>
       );
     }
@@ -127,7 +140,6 @@
             <option value="1">Kilometers & Miles</option>
             <option value="2">Centimeters & Inches</option>
           </select>
-          <hr />
           {index === "0" ? <MinutesToHours /> : null}
           {index === "1" ? <KmToMiles /> : null}
           {index === "2" ? <CmToInches /> : null}
