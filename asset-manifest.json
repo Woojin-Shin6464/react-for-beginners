@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/Woojin-Shin6464/react-for-beginners.git/static/js/main.61306812.js",
-    "index.html": "/Woojin-Shin6464/react-for-beginners.git/index.html",
-    "main.61306812.js.map": "/Woojin-Shin6464/react-for-beginners.git/static/js/main.61306812.js.map"
+    "main.js": "/react-for-beginners/static/js/main.61306812.js",
+    "index.html": "/react-for-beginners/index.html",
+    "main.61306812.js.map": "/react-for-beginners/static/js/main.61306812.js.map"
   },
   "entrypoints": [
     "static/js/main.61306812.js"
